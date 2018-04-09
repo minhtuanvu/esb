@@ -44,7 +44,7 @@ Deploy the ESB in the PaaS. Increasingly ESB vendors have moved their offerings 
 
 The Cloud Foundry edition of TIBCO allows individual TIBCO business processes to be natively scaled and managed by Cloud Foundry. From a Cloud Foundry perspective the TIBCO business process is treated as a new language with its own buildpack. This is a reasonable middle ground between ESBs and Microservices. There are two issues with a cloud enabled ESB like TIBCO, the ESB needs to leverage native messaging capabilities (like FTL) that are not available natively in the PaaS. The ESB needs to leverage the managed data backing services natively available on the platform.
 
-![Phase 1](Phase-1.png)
+![Phase 1](Phase-1.1.png)
 
 ## Phase 2
 A refactoring of the services offered by the ESB such that the ESB layer is kept as thin as possible. At this point there are many opportunities to migrate from the ESB to Spring Integration/Apache Camel to achieve basic transformation, mediation, and routing. Consumer Services Expose APIs with formats/protocols desired by consumers. Consumer services transform formats provide sync/async, protocols and composite workflows. Provider Services integrate with legacy IT systems, implement required workflow and consume whatever protocol/format is exposed by legacy systems. Refactor services incrementally per bounded context, prioritizing the ones that are new or under active development.
